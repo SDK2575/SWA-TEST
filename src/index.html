@@ -12,6 +12,13 @@
   <main>
     <h2>SWA WITH Azure API</h2>
   </main>
+  
+  <script>
+    (async function() {
+        const { text } = await( await fetch("/api/HttpSendData")).json();
+        document.querySelector('#name').textContent = text;
+    }())
+    </script>
 </body>
 
 </html>
